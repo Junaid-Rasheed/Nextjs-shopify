@@ -5,17 +5,7 @@ import { Button, Grid, Image, Input, List } from "semantic-ui-react";
 import { useEffect, useState } from "react";
 
 const PID = ({ product }) => {
-  // const router = useRouter();
-  // const { productId } = router.query;
-
-  // async function sessionId() {
-  //   const session = await client.checkout.create();
-  //   console.log("session is", session);
-  //   console.log('hhhh')
-  // }
-
   const [sessiocCheckout, setSessionCheckout] = useState();
-  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function session() {
@@ -27,6 +17,17 @@ const PID = ({ product }) => {
 
     session();
   }, []);
+  // const router = useRouter();
+  // const { productId } = router.query;
+
+  // async function sessionId() {
+  //   const session = await client.checkout.create();
+  //   console.log("session is", session);
+  //   console.log('hhhh')
+  // }
+
+  // const [loading, setLoading] = useState(true);
+
 
   // useEffect(() => {
   //   if(loading){
@@ -111,6 +112,7 @@ export const getServerSideProps = async ({ query }) => {
       product: JSON.parse(JSON.stringify(product)),
     },
   };
+  //hello
 };
 
 export default PID;
